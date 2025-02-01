@@ -1,0 +1,9 @@
+services:
+  portfolio:
+    build: .
+    volumes:
+      - ./src:/usr/src/app
+    command: sh -c 'cd react && yarn start && npm run dev'
+    ports:
+      - 3000:3000
+    tty: true
